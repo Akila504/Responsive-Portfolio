@@ -8,6 +8,10 @@ body {
 
 }
 
+
+
+/*NAVIGATION SECTION*/
+
 /*changed the nav bar selector from an id to a class to decrease the specificty*/
 /*explain why I used rem and em instead of pixels */
 
@@ -20,7 +24,6 @@ body {
 
 }
 
-
 .navigation {
   display: flex;
   flex-direction: row;
@@ -29,11 +32,74 @@ body {
   text-decoration: underline;
 }
 
+
 .navigation p {
   padding-left: 2em;
   padding-right: 2em;
+  cursor: pointer;
 }
 
+
+/*HERO BANNER SECTION*/
+
+.hero-banner {
+  display: flex;
+  background-image: url("../images/heroimage.jpg");
+  min-height: 20em;
+  color: white;
+}
+
+.hero-banner h2 {
+  font-size: 5rem;
+  text-align: center;
+  position: absolute;
+  right: 1px;
+  padding: 25px
+}
+
+
+/* MAIN GRID*/
+.main-grid {
+  display: grid;
+  min-height: 500px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "page-section surf-report surf-report "
+    "page-section led-wall calculator"
+    "page-section pastel-puzzle Run-buddy"
+}
+
+
+
+.surf-report {
+  grid-area: surf-report;
+
+}
+
+
+.led-wall {
+  grid-area: led-wall;
+}
+
+
+.calculator {
+  grid-area: calculator;
+}
+
+.pastel-puzzle {
+  grid-area: pastel-puzzle;
+}
+
+
+.Run-buddy {
+  grid-area: Run-buddy;
+}
+
+
+
+
+/*FOOTER SECTION*/
 .footer {
   display: flex;
   flex-direction: row;
@@ -52,3 +118,5 @@ body {
   padding-left: 2em;
   padding-right: 2em;
 }
+
+/*about me grid */
