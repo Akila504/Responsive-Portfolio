@@ -21,14 +21,14 @@ body {
   font-size: 2rem;
   padding-left: 1em;
   background-color: grey;
-
 }
 
 .navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 10em;
+  margin-left: auto;
+  /*padding-left: 10em;*/
   text-decoration: underline;
 }
 
@@ -54,28 +54,37 @@ body {
   text-align: center;
   position: absolute;
   right: 1px;
-  padding: 25px
+  padding: 25px;
+  margin-bottom: auto;
 }
 
 
+
 /* MAIN GRID*/
+
+/*work content*/
+
 .main-grid {
   display: grid;
   grid-gap: 20px;
   /*change this later*/
   min-height: 2000px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
   grid-template-areas:
     "page-section surf-report surf-report "
     "page-section led-wall calculator"
-    "page-section pastel-puzzle Run-buddy";
+    "page-section pastel-puzzle Run-buddy"
+    "footer page-section-contact page-section-contact";
 }
+
 
 .page-section {
   grid-area: page-section;
   border-right: 4px solid;
   border-right-color: black;
+  /*margin-right: 5%;*/
+  margin-left: auto;
 }
 
 .surf-report {
@@ -108,13 +117,13 @@ body {
 
 #work {
   background-position: center;
-  padding: 1.5em;
+  /*padding: 1.5em;*/
   background-size: cover;
   display: grid;
   background-repeat: no-repeat;
   cursor: pointer;
   align-items: end;
-  border: 2px gray solid;
+  /*border: 2px gray solid;*/
 }
 
 .heading {
@@ -122,7 +131,7 @@ body {
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px;
+  /*padding: 15px;*/
 }
 
 #heading {
@@ -130,27 +139,28 @@ body {
   align-items: center;
 }
 
-
-
-/*FOOTER SECTION*/
 .footer {
-  display: flex;
-  flex-direction: row;
-  font-size: 2rem;
+  grid-area: footer;
+  font-size: 2.5rem;
+  border-right: 4px solid;
+  border-right-color: black;
+  margin-left: auto;
 }
 
 .page-section-contact {
+  grid-area: page-section-contact;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-decoration: underline;
-  padding-left: 10em;
+  justify-content: space-evenly;
+  cursor: pointer;
 }
 
 .page-section-contact p {
   padding-left: 2em;
   padding-right: 2em;
   cursor: pointer;
+  font-size: 2em;
+  color: purple;
 }
-
-/*about me grid */
