@@ -38,7 +38,7 @@ body {
   flex-direction: row;
   align-items: center;
   margin-left: auto;
-  text-decoration: underline;
+  text-decoration: none;
   overflow: auto;
 }
 
@@ -57,7 +57,8 @@ body {
   }
 }
 
-.navigation p {
+a {
+  color: #ffffff;
   padding-left: 1em;
   padding-right: 1em;
   cursor: pointer;
@@ -90,6 +91,11 @@ body {
   height: 350px;
   width: 350px;
   margin: auto;
+  transition: 0.7s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width:550px) {
@@ -231,8 +237,13 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
   align-items: end;
-  border: 2px gray solid;
+  border: 5px solid #202020;
+  transition: 0.7s;
 
+}
+
+#work:hover {
+  transform: scale(1.1);
 }
 
 .heading {
