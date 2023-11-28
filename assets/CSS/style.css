@@ -85,6 +85,24 @@ body {
   margin-bottom: auto;
 }
 
+.profile-pic {
+  display: flex;
+  height: 350px;
+  width: 350px;
+  margin: auto;
+}
+
+@media screen and (max-width:550px) {
+  .profile-pic {
+    display: flex;
+    height: 275px;
+    width: 275px;
+    margin-bottom: 2em;
+    margin-top: auto;
+  }
+}
+
+
 
 
 /* MAIN GRID*/
