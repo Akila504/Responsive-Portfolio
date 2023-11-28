@@ -3,7 +3,7 @@
 
 }
 
-
+/*Added a margin of 1% by taking away from the max width*/
 body {
   position: relative;
   margin: 0;
@@ -15,13 +15,13 @@ body {
   margin: 1%;
 }
 
-
+/*In genreal I tried to use classes as apposed to id to reduce specificity*/
 
 
 /*NAVIGATION SECTION*/
 
 /*changed the nav bar selector from an id to a class to decrease the specificty*/
-/*explain why I used rem and em instead of pixels */
+/*I tried to use relative units as much as I can, to ensure font, margins, paddings is not a fixed size and therefore improve responsiveness */
 
 .navBar {
   display: flex;
@@ -42,6 +42,7 @@ body {
   overflow: auto;
 }
 
+/*decreasing the font size for the navigation pane when the width is less than or equal to 800px*/
 @media screen and (max-width:800px) {
   .navigation {
     font-size: 1rem;
@@ -49,7 +50,7 @@ body {
 }
 
 
-
+/*changing the Navigation items to display vertically when the width is less than 500px*/
 @media screen and (max-width:500px) {
   .navigation {
     display: inline;
@@ -95,10 +96,13 @@ a {
   transition: 0.7s;
 }
 
+/*adding in the zoom in animation*/
 .profile-pic:hover {
   transform: scale(1.2);
 }
 
+
+/*when the max width is less than or equal to 550 px I am decreasing the height and width of the profile pic*/
 @media screen and (max-width:550px) {
   .profile-pic {
     display: flex;
@@ -116,6 +120,7 @@ a {
 
 /*work content*/
 
+/*setting up a grid to include all the section down from the about me section*/
 .main-grid {
   display: grid;
   grid-gap: 20px;
@@ -131,7 +136,7 @@ a {
     "contact page-section-contact page-section-contact";
 }
 
-
+/*Changing the grid to a single column grid when the max width of the screen is less than or equal to 500px*/
 @media screen and (max-width:500px) {
   .main-grid {
     grid-template-columns: repeat(1, 1fr);
