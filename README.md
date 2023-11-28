@@ -19,14 +19,13 @@ N/A
 ## Usage
 
 To see the completed website please visit :
-https://akila504.github.io/horiseon-code-refactor/ 
+https://akila504.github.io/Responsive-Portfolio/
 
 ![the website should look like this](assets/images/Website.jpeg)
 ## Credits
-Some youtube videos that I watched that helped greatly: 
-
-
-Book that helped greatly
+Book that helped greatly :  
+CSS in depth by Keith J. Grant
+https://www.manning.com/books/css-in-depth
 
 ## License
 MIT licence 
