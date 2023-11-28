@@ -1,12 +1,20 @@
 * {
   box-sizing: border-box;
+
 }
 
 
 body {
+  position: relative;
+  margin: 0;
+  padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+  line-height: 1.5;
+  font-size: 1.5rem;
+  max-width: 99%;
+  margin: 1%;
 }
+
 
 
 
@@ -18,9 +26,11 @@ body {
 .navBar {
   display: flex;
   flex-direction: row;
-  font-size: 2rem;
-  padding-left: 1em;
-  background-color: grey;
+  /*font-size: 2rem;*/
+  background-color: #202020;
+  padding: 0.75em;
+  color: white;
+
 }
 
 .navigation {
@@ -28,10 +38,24 @@ body {
   flex-direction: row;
   align-items: center;
   margin-left: auto;
-  /*padding-left: 10em;*/
   text-decoration: underline;
+  overflow: auto;
 }
 
+@media screen and (max-width:800px) {
+  .navigation {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media screen and (max-width:500px) {
+  .navigation {
+    display: inline;
+    margin: auto;
+  }
+}
 
 .navigation p {
   padding-left: 1em;
@@ -47,10 +71,13 @@ body {
   background-image: url("../images/heroimage.jpg");
   min-height: 20em;
   color: white;
+  max-height: 98%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .hero-banner h2 {
-  font-size: 5rem;
+  /*font-size: 5rem;*/
   text-align: center;
   position: absolute;
   right: 1px;
@@ -70,12 +97,66 @@ body {
   /*change this later*/
   min-height: 2000px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr;
   grid-template-areas:
+    "page-section-AM about-me about-me"
     "page-section surf-report surf-report "
     "page-section led-wall calculator"
     "page-section pastel-puzzle Run-buddy"
-    "footer page-section-contact page-section-contact";
+    "contact page-section-contact page-section-contact";
+}
+
+
+@media screen and (max-width:500px) {
+  .main-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "page-section-AM"
+      "about-me"
+      "page-section"
+      "surf-report"
+      "led-wall"
+      "calculator"
+      "pastel-puzzle"
+      "Run-buddy"
+      "contact"
+      "page-section-contact";
+
+  }
+}
+
+
+
+.page-section-AM {
+  grid-area: page-section-AM;
+  /*font-size: 2.5rem;*/
+  border-right: 4px solid;
+  border-right-color: black;
+  margin-left: auto;
+  padding-right: 1em;
+}
+
+
+
+@media screen and (max-width:500px) {
+  .page-section-AM {
+    border: none;
+    margin: auto;
+  }
+}
+
+
+.about-me {
+  grid-area: about-me;
+  display: flex;
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  /* font-size: 2em;*/
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 
@@ -85,6 +166,15 @@ body {
   border-right-color: black;
   /*margin-right: 5%;*/
   margin-left: auto;
+  padding-right: 1em;
+}
+
+
+@media screen and (max-width:500px) {
+  .page-section {
+    border: none;
+    margin: auto;
+  }
 }
 
 .surf-report {
@@ -123,7 +213,8 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
   align-items: end;
-  /*border: 2px gray solid;*/
+  border: 2px gray solid;
+
 }
 
 .heading {
@@ -131,20 +222,29 @@ body {
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
-  /*padding: 15px;*/
+  padding: 15px;
 }
 
 #heading {
-  font-size: 2.5rem;
+  /*font-size: 2.5rem;*/
   align-items: center;
 }
 
-.footer {
-  grid-area: footer;
-  font-size: 2.5rem;
+.contact {
+  grid-area: contact;
+  /*font-size: 2.5rem;*/
   border-right: 4px solid;
   border-right-color: black;
   margin-left: auto;
+  padding-right: 1em;
+}
+
+
+@media screen and (max-width:500px) {
+  .contact {
+    border: none;
+    margin: auto;
+  }
 }
 
 .page-section-contact {
@@ -154,13 +254,29 @@ body {
   align-items: center;
   text-decoration: underline;
   justify-content: space-evenly;
+  grid-column: span 2;
   cursor: pointer;
+  max-width: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width:600px) {
+  .page-section-contact {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .page-section-contact {
+    display: inline;
+    margin: auto
+  }
 }
 
 .page-section-contact p {
-  padding-left: 2em;
-  padding-right: 2em;
+  /*padding-left: 2em;
+  padding-right: 2em;*/
   cursor: pointer;
-  font-size: 2em;
+  /*font-size: 2em;*/
   color: purple;
 }
